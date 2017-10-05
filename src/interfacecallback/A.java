@@ -5,20 +5,31 @@ public class A {
         B b = new B();
         b.a = 2;
 
+        //clone demo
+        b.p.phoenix = 250;
+        B clone = (B) b.clone();
+        clone.a = 22;
+        clone.p.phoenix = 22222;
+        System.out.println("b "+b.p.phoenix);
+        System.out.println("clone "+clone.p.phoenix);
+
+        //接口回调
         b.setCallback(new ICallback() {
             @Override
             public void onCallback(String msg) {
                 System.out.println("A received "+msg);
             }
         });
+        //运行时异常（空指针异常）
         b = null;
+
         b.doSth();
 
-        try {
-            b.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            b.clone();
+//        } catch (CloneNotSupportedException e) {
+//            e.printStackTrace();
+//        }
 
 
         if (b instanceof ICallback) {

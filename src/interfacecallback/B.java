@@ -6,6 +6,8 @@ public class B implements Cloneable {
 
     private ICallback listener;
 
+    public Phoenix p = new Phoenix();
+
     public void setCallback(ICallback listener) {
         this.listener = listener;
     }
@@ -25,7 +27,22 @@ public class B implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    protected Object clone(){
+        //浅克隆
+//        try {
+//            return super.clone();
+//        } catch (CloneNotSupportedException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+        //深克隆
+        try {
+            B clone =  (B) super.clone();
+            clone.p = new Phoenix();
+            return clone;
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
