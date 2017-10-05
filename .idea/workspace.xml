@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ca1d311-eac8-40d4-8321-a10e2e752b92" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/enumeration/EnumDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/justcode/thread/WaitNotify$MyThread1.class" afterPath="$PROJECT_DIR$/out/production/justcode/thread/WaitNotify$MyThread1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/justcode/thread/WaitNotify$MyThread2.class" afterPath="$PROJECT_DIR$/out/production/justcode/thread/WaitNotify$MyThread2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/justcode/thread/WaitNotify.class" afterPath="$PROJECT_DIR$/out/production/justcode/thread/WaitNotify.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="3ca1d311-eac8-40d4-8321-a10e2e752b92" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -480,12 +474,12 @@
       <updated>1506338531850</updated>
       <workItem from="1506338556983" duration="3389000" />
       <workItem from="1506923347793" duration="40372000" />
-      <workItem from="1507182840813" duration="1307000" />
+      <workItem from="1507182840813" duration="1420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45068000" />
+    <option name="totallyTimeSpent" value="45181000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
