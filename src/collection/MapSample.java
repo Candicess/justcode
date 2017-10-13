@@ -1,9 +1,6 @@
 package collection;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Created by huan on 2017/9/24.
@@ -36,6 +33,12 @@ public class MapSample {
         hashMap.put("boto", 60);
         System.out.println(hashMap);
         hashMap=null;
+
+        Set<Map.Entry<String, Integer>> entries = hashMap.entrySet();
+        for (Map.Entry<String, Integer> entry : entries) {
+            entry.getKey();
+        }
+
 
         Map<String,Integer> treeMap= new TreeMap<>();
         treeMap.put("fool", 1);

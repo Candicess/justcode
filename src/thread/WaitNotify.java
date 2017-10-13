@@ -11,12 +11,17 @@ public class WaitNotify {
         @Override
         public void run() {
             super.run();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             synchronized (object) {
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    Thread.sleep(500);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
                 System.out.println("T1 notify before");
                 object.notify();
                 System.out.println("T1 notify after");

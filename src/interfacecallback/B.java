@@ -3,10 +3,9 @@ package interfacecallback;
 public class B implements Cloneable {
 
     public int a = 1;
+    public Phoenix p = new Phoenix();
 
     private ICallback listener;
-
-    public Phoenix p = new Phoenix();
 
     public void setCallback(ICallback listener) {
         this.listener = listener;
@@ -27,7 +26,7 @@ public class B implements Cloneable {
     }
 
     @Override
-    protected Object clone(){
+    public Object clone(){
         //浅克隆
 //        try {
 //            return super.clone();

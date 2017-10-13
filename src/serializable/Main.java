@@ -19,7 +19,7 @@ public class Main {
         try {
             FileInputStream fis = new FileInputStream(studentlist);
             ObjectInputStream ois = new ObjectInputStream(fis);
-            Object object = ois.readObject();
+            Student object = (Student) ois.readObject();
             System.out.println(object);
             System.out.println(s == object);
             System.out.println(s.equals(object));
