@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /**
  * Created by huan on 2017/10/19.
- * 二叉树反转
+ * 括号匹配
  * Ref: http://blog.devtang.com/2015/06/16/talk-about-tech-interview/
  */
 public class BraceMatch {
