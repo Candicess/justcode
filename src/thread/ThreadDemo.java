@@ -1,5 +1,7 @@
 package thread;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class ThreadDemo {
     public static class MyThread extends Thread{
 
@@ -34,6 +36,12 @@ public class ThreadDemo {
         MyRunable runnable2 = new MyRunable("2");
         new Thread(runnable1).start();
         new Thread(runnable2).start();
+
+        // 原子计数
+        // i++ 非原子操作的
+        AtomicInteger integer = new AtomicInteger(0);
+        integer.incrementAndGet(); // ++i;
+        integer.getAndIncrement(); // i++;
     }
     public static class MyRunable implements Runnable{
         private String name;

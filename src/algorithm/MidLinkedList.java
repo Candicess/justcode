@@ -1,5 +1,8 @@
 package algorithm;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by huan on 2017/10/19.
  * 找出单链表的中间节点
@@ -37,5 +40,8 @@ public class MidLinkedList {
         list.next = new LinkedList(2);
         list.next.next = new LinkedList(3);
         System.out.println(new MidLinkedList().solution(list).value);
+
+        List<String> newList = new java.util.LinkedList<>();
+
     }
 }

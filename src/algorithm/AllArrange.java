@@ -13,7 +13,7 @@ public class AllArrange {
      * 函数功能：输出字符串数字的各个字符全排列
      */
     public void recursionArrange(char[] arrayA, int start, int end) {
-        if (end <= 1)
+        if (end < 0)
             return;
         if (start == end) {
             for (int i = 0; i < arrayA.length; i++)
@@ -37,7 +37,7 @@ public class AllArrange {
 
     public static void main(String[] args) {
         AllArrange test = new AllArrange();
-        String str = "abc";
+        String str = "a";
         char[] array = str.toCharArray();
         test.recursionArrange(array, 0, array.length - 1);
     }
