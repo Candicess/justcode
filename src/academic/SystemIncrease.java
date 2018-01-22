@@ -31,10 +31,7 @@ public class SystemIncrease {
         resList.add(getCurrentData());
 
         // 执行 m的n次方 次
-        while (resList.size() < Math.pow(answers, workers)) {
-            // 每次都是给末尾+1
-            increase();
-        }
+        increase();
 
         // 打印结果集
         System.out.println(resList);
@@ -44,11 +41,16 @@ public class SystemIncrease {
      * 每次都给末尾的数字+1
      */
     private static void increase() {
+        if (resList.size() == Math.pow(answers, workers)) {
+            return;
+        }
+
         for (int i = data.length - 1; i >= 0 ; i--) {
             // 不满足进位条件时，当前数位+1，并加进结果集
             if (data[i] < answers - 1) {
                 data[i]++;
                 resList.add(getCurrentData());
+                increase();
                 return;
             }
 
@@ -58,6 +60,7 @@ public class SystemIncrease {
                 continue;
             }
         }
+        increase();
     }
 
     /**
