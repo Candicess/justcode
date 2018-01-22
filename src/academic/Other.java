@@ -8,14 +8,14 @@ import java.util.ArrayList;
 public class Other {
 
     public static void main(String[] args) {
-        double pa = 0.34;
-        double pb = 0.33;
-        double pc = 0.33;
-        double q1 = 0.6;
-        double q2 = 0.7;
+        double pa = 0.3;
+        double pb = 0.3;
+        double pc = 0.4;
+        double q1 = 0.4;
+        double q2 = 0.34;
 
 
-        bayesDeduction(pa, pb, pc, q1, q2);
+        method3Answer1Worker(pa, pb, pc, q1);
     }
 
     private static void method2Answer2Worker(double pa, double pb, double q1, double q2) {
@@ -27,14 +27,22 @@ public class Other {
     }
 
 
-    //求解3个答案选项在2个工人中可能的答案情况
+    //求解3个答案在1个工人的可能情况
+    private static void method3Answer1Worker(double pa, double pb, double pc, double q1){
+        double unq1 = (1 - q1) / 2;
+        double a = (pa * q1) / (pa * q1 + pb * unq1 + pc * unq1);
+        double b = (pa * unq1) / (pa * unq1 + pb * q1 + pc * unq1);
+        double c = (pa * unq1) / (pa * unq1 + pb * unq1 + pc * q1);
+        System.out.println("A:"+ a +",B:"+ b +",C:"+ c);
+    }
 
+    //求解3个答案选项在2个工人中可能的答案情况
 
     private static void  bayesDeduction(double pa, double pb, double pc, double q1, double q2){
         double unq1 = (1 - q1) / 2;
         double unq2 = (1 - q2) / 2;
         double aa = (pa * q1 * q2) / (pa * q1 * q2 + pb * unq1  * unq2 + pc * unq1 * unq2);
-        double ab = (pa * q1 * unq2) / (pa * q1 * q2 + pb * unq1 * unq2 + pc * unq1 * unq2);
+        double ab = (pa * q1 * unq2) / (pa * q1 * unq2 + pb * unq1 * q2 + pc * unq1 * unq2);
         double ac = (pa * q1 * unq2) / (pa * q1 * unq2 + pb * unq1 * unq2 + pc * unq1 * q2);
         double ba = (pa * unq1 * q2) / (pa * unq1 * q2 + pa * q1 * unq2 + pc * unq1 * unq2);
         double bb = (pa *unq1 * unq2) / (pa *unq1 * unq2 + pb * q1 * q2 + pc * unq1 * unq2);
