@@ -16,7 +16,7 @@ public class SystemIncrease {
     /**
      * 工人数量
      */
-    public static int workers = 2;
+    public static int workers = 10;
     /**
      * 每一组的答案
      */
