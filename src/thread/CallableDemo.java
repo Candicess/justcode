@@ -19,7 +19,8 @@ public class CallableDemo {
                 return new Random().nextInt(100);
             }
         };
-        FutureTask<Integer> future = new FutureTask<Integer>(callable);
+        FutureTask<Integer> future = new FutureTask<>(callable);
+//        ?
         new Thread(future).start();
 
         try {

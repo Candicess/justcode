@@ -17,4 +17,25 @@ public class Main {
         System.out.println(pattern.matcher(ip).matches());
     }
 
+//    public boolean equals(Object object) {
+//        if (object == null) {
+//            return false;
+//        }
+//        if (this == object){
+//            return true;
+//        }
+//        if (object instanceof String){
+//            String str = (String)object;
+//            if (this.length() != str.length()) {
+//                return false;
+//            }
+//            for (int i = 0; i < str.length(); i++) {
+//                if (this.charAt(i) != str.charAt(i)){
+//                    return false;
+//                }
+//            }
+//            return true;
+//        }
+//    }
+
 }

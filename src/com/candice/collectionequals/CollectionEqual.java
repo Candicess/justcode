@@ -33,10 +33,10 @@ class Person{
         if (this == obj)
             return true;
         if (obj instanceof Person){
-//            Person p = (Person) obj;
-            String p = (String) obj;
-//            if (p.name.equals(this.name) && p.age == this.age)
-//                return true;
+            Person p = (Person) obj;
+//            String p = (String) obj;
+            if (p.name.equals(this.name) && p.age == this.age)
+                return true;
         }
         return false;
     }

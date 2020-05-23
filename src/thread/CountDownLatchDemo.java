@@ -41,6 +41,8 @@ public class CountDownLatchDemo {
 
         try {
             countDownLatch.await();
+
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
